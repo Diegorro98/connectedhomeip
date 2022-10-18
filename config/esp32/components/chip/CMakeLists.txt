@@ -48,7 +48,7 @@ if (NOT CMAKE_BUILD_EARLY_EXPANSION)
     endif()
 endif()
 
-idf_component_register(SRCS chip.c chip.cpp
+idf_component_register(SRCS chip.cpp
                        PRIV_REQUIRES ${CHIP_REQURIE_COMPONENTS})
 
 # Prepare initial args file (lacking compile flags)
@@ -213,7 +213,6 @@ add_custom_command(OUTPUT "${args_gn}"
                            ${CMAKE_CURRENT_LIST_DIR}/create_args_gn.py 
                            "${CMAKE_BINARY_DIR}"
                            "${idf_path}"
-                           "${CMAKE_CURRENT_LIST_DIR}/chip.c"
                            "${CMAKE_CURRENT_LIST_DIR}/chip.cpp"
                            "${args_gn_input}"
                            "${args_gn}"
